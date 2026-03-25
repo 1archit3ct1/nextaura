@@ -207,3 +207,26 @@ demoTabs.forEach((tab) => {
     renderDemo(tab.dataset.step);
   });
 });
+
+const copyButtons = document.querySelectorAll("[data-copy-target]");
+
+copyButtons.forEach((button) => {
+  button.addEventListener("click", async () => {
+    const target = document.getElementById(button.dataset.copyTarget);
+    if (!target) return;
+
+    try {
+      await navigator.clipboard.writeText(target.textContent.trim());
+      const originalText = button.textContent;
+      button.textContent = "Copied";
+      button.classList.add("is-copied");
+
+      window.setTimeout(() => {
+        button.textContent = originalText;
+        button.classList.remove("is-copied");
+      }, 1400);
+    } catch {
+      button.textContent = "Copy failed";
+    }
+  });
+});

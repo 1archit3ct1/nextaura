@@ -137,9 +137,10 @@ main {
 }
 
 .hero h1,
-.section-heading h2 {
+.section-heading h2,
+.demo-copy h3 {
   margin: 0;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Bodoni Moda", serif;
   font-weight: 600;
   line-height: 0.98;
   letter-spacing: -0.03em;
@@ -239,8 +240,7 @@ main {
 }
 
 .proof-card strong,
-.card h3,
-.demo-copy h3 {
+.card h3 {
   font-size: 1.2rem;
 }
 
@@ -375,7 +375,6 @@ main {
 
 .demo-copy h3 {
   margin: 0 0 0.7rem;
-  font-family: "Cormorant Garamond", serif;
   font-size: 2rem;
 }
 
@@ -468,6 +467,65 @@ main {
   gap: 1.2rem;
 }
 
+.contact-shell {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr 1fr;
+  gap: 1rem;
+}
+
+.contact-card {
+  min-height: 12.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-card-primary {
+  background: linear-gradient(180deg, rgba(255, 243, 233, 0.96), rgba(242, 214, 193, 0.82));
+}
+
+.contact-value {
+  display: block;
+  font-size: 1.15rem;
+  margin: 0.2rem 0 1rem;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.copy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.9rem;
+  padding: 0 1rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.52);
+  color: var(--text);
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.copy-button:hover {
+  transform: translateY(-2px);
+}
+
+.copy-button.is-copied {
+  background: linear-gradient(135deg, #c78f71, #efc2a4);
+  color: #fffaf6;
+  border-color: transparent;
+}
+
+.button-inline {
+  min-height: 2.9rem;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -485,6 +543,7 @@ main {
   .three-up,
   .flow-grid,
   .hero-proof,
+  .contact-shell,
   .repo-card,
   .demo-panel {
     grid-template-columns: 1fr;
