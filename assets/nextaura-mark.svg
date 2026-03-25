@@ -1,0 +1,35 @@
+<svg width="900" height="900" viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="900" rx="40" fill="#090807"/>
+  <g opacity="0.28" stroke="#E7D2B7" stroke-width="3">
+    <path d="M450 118V178"/>
+    <path d="M450 722V782"/>
+    <path d="M118 450H178"/>
+    <path d="M722 450H782"/>
+  </g>
+  <g opacity="0.7" stroke="#E7D2B7" stroke-width="5">
+    <path d="M318 202H375"/>
+    <path d="M582 202H525"/>
+    <path d="M318 698H375"/>
+    <path d="M582 698H525"/>
+    <path d="M202 318V375"/>
+    <path d="M202 582V525"/>
+    <path d="M698 318V375"/>
+    <path d="M698 582V525"/>
+  </g>
+  <g stroke="#F5EBDD" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M328 618V278H356L566 498V282H620V622H588L382 398V618H328Z" stroke-width="18"/>
+    <path d="M401 353L536 489" stroke="#CBA27D" stroke-width="9" opacity="0.6"/>
+    <path d="M390 340L525 476" stroke="#CBA27D" stroke-width="4" opacity="0.35"/>
+  </g>
+  <g fill="#F5EBDD">
+    <circle cx="450" cy="186" r="5"/>
+    <circle cx="450" cy="714" r="5"/>
+    <circle cx="186" cy="450" r="5"/>
+    <circle cx="714" cy="450" r="5"/>
+  </g>
+  <g fill="#F5EBDD" font-family="Manrope, Arial, sans-serif" text-anchor="middle">
+    <text x="450" y="735" font-size="72" letter-spacing="22">NEXTAURA</text>
+    <text x="450" y="787" font-size="18" letter-spacing="9" opacity="0.92">AGENT SYSTEMS | TRUST PROTOCOL | AUTONOMY INFRASTRUCTURE</text>
+    <text x="450" y="835" font-size="18" letter-spacing="8" opacity="0.68">FOUNDED 2026</text>
+  </g>
+</svg>
