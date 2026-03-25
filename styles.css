@@ -1,15 +1,15 @@
 :root {
-  --bg: #fbf0e8;
-  --bg-soft: rgba(255, 248, 242, 0.92);
-  --panel: rgba(255, 248, 242, 0.88);
-  --panel-strong: rgba(255, 242, 233, 0.95);
-  --line: rgba(121, 79, 60, 0.14);
-  --text: #3e261b;
-  --muted: #744f41;
-  --rose-brown: #b87d63;
-  --almond: #edd2c2;
-  --cream: #fffaf6;
-  --shadow: 0 30px 78px rgba(105, 67, 48, 0.14);
+  --bg: #f4eadf;
+  --bg-soft: rgba(248, 240, 232, 0.92);
+  --panel: rgba(249, 242, 235, 0.9);
+  --panel-strong: rgba(244, 234, 224, 0.95);
+  --line: rgba(103, 73, 56, 0.16);
+  --text: #342116;
+  --muted: #6b4f40;
+  --rose-brown: #9f7156;
+  --almond: #dcc3af;
+  --cream: #faf5ef;
+  --shadow: 0 30px 78px rgba(86, 60, 45, 0.14);
   --max: 1200px;
 }
 
@@ -25,9 +25,9 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top, rgba(231, 190, 164, 0.5), transparent 28%),
-    radial-gradient(circle at 88% 12%, rgba(251, 231, 217, 0.88), transparent 24%),
-    linear-gradient(180deg, #fdf3ec 0%, #f8e9df 46%, #fcf5ef 100%);
+    radial-gradient(circle at top, rgba(204, 170, 145, 0.34), transparent 26%),
+    radial-gradient(circle at 86% 14%, rgba(229, 212, 196, 0.52), transparent 22%),
+    linear-gradient(180deg, #f6eee6 0%, #efe3d7 46%, #f7f0e9 100%);
   color: var(--text);
   font-family: "Manrope", sans-serif;
 }
@@ -66,13 +66,13 @@ a {
 .backdrop-top {
   top: -18rem;
   right: -12rem;
-  background: rgba(209, 160, 132, 0.64);
+  background: rgba(187, 150, 123, 0.42);
 }
 
 .backdrop-bottom {
   bottom: 4rem;
   left: -16rem;
-  background: rgba(236, 206, 188, 0.8);
+  background: rgba(214, 191, 173, 0.52);
 }
 
 .site-header {
@@ -86,7 +86,7 @@ a {
   margin: 0 auto;
   padding: 1.15rem 1.5rem;
   backdrop-filter: blur(20px);
-  background: rgba(255, 245, 236, 0.82);
+  background: rgba(248, 240, 232, 0.84);
 }
 
 .brand-lockup {
@@ -190,7 +190,7 @@ main {
 }
 
 .button-primary {
-  background: linear-gradient(135deg, #bb7d62, #e7b89b);
+  background: linear-gradient(135deg, #9d6d52, #caa383);
   color: #fffaf6;
 }
 
@@ -219,7 +219,7 @@ main {
   position: relative;
   border: 1px solid var(--line);
   border-radius: 1.6rem;
-  background: linear-gradient(180deg, rgba(255, 249, 244, 0.82), rgba(255, 239, 228, 0.88));
+  background: linear-gradient(180deg, rgba(249, 243, 236, 0.9), rgba(241, 231, 220, 0.92));
   box-shadow: var(--shadow);
 }
 
@@ -260,7 +260,7 @@ main {
   inset: 1px;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), transparent 42%, rgba(191, 126, 99, 0.18));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), transparent 42%, rgba(159, 113, 86, 0.18));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -333,18 +333,6 @@ main {
   margin-top: 0.45rem;
 }
 
-.audience-grid {
-  align-items: stretch;
-}
-
-.audience-card {
-  min-height: 13rem;
-}
-
-.audience-card-primary {
-  background: linear-gradient(180deg, rgba(255, 244, 236, 0.98), rgba(245, 220, 204, 0.88));
-}
-
 .demo-reel-card {
   display: grid;
   grid-template-columns: 0.78fr 1.22fr;
@@ -358,7 +346,7 @@ main {
   position: relative;
   border: 1px solid var(--line);
   border-radius: 1.6rem;
-  background: linear-gradient(180deg, rgba(255, 249, 244, 0.86), rgba(255, 238, 228, 0.92));
+  background: linear-gradient(180deg, rgba(249, 243, 236, 0.92), rgba(241, 231, 220, 0.95));
   box-shadow: var(--shadow);
 }
 
@@ -390,7 +378,7 @@ main {
   height: 100%;
   min-height: 24rem;
   object-fit: cover;
-  background: #f7e9de;
+  background: #efe3d7;
 }
 
 .demo-shell {
@@ -426,7 +414,7 @@ main {
 }
 
 .demo-tab.is-active {
-  background: linear-gradient(135deg, #bb7d62, #e7b89b);
+  background: linear-gradient(135deg, #9d6d52, #caa383);
   color: #fffaf6;
   border-color: transparent;
 }
@@ -612,11 +600,11 @@ main {
 .model-option.is-selected,
 .check-item.is-ready {
   border-color: rgba(199, 143, 113, 0.45);
-  background: linear-gradient(180deg, rgba(255, 244, 236, 0.98), rgba(244, 221, 208, 0.9));
+  background: linear-gradient(180deg, rgba(248, 240, 232, 0.98), rgba(236, 223, 211, 0.92));
 }
 
 .check-item.is-blocked {
-  background: rgba(255, 234, 223, 0.72);
+  background: rgba(242, 230, 220, 0.82);
 }
 
 .option-title {
@@ -660,13 +648,13 @@ main {
 }
 
 .option-status.is-positive {
-  background: rgba(238, 209, 194, 0.95);
-  color: #7f503b;
+  background: rgba(225, 207, 191, 0.96);
+  color: #6f503e;
 }
 
 .option-status.is-warning {
-  background: rgba(245, 220, 201, 0.95);
-  color: #8a563d;
+  background: rgba(234, 214, 198, 0.96);
+  color: #835742;
 }
 
 .option-status.is-muted {
@@ -735,7 +723,7 @@ main {
   height: 100%;
   width: 0;
   border-radius: inherit;
-  background: linear-gradient(135deg, #bb7d62, #e7b89b);
+  background: linear-gradient(135deg, #9d6d52, #caa383);
   transition: width 320ms ease;
 }
 
@@ -803,13 +791,13 @@ main {
 }
 
 .status-pill.success {
-  background: rgba(238, 209, 194, 0.95);
-  color: #7f503b;
+  background: rgba(225, 207, 191, 0.96);
+  color: #6f503e;
 }
 
 .status-pill.warning {
-  background: rgba(245, 220, 201, 0.95);
-  color: #8a563d;
+  background: rgba(234, 214, 198, 0.96);
+  color: #835742;
 }
 
 .status-pill.muted {
@@ -898,9 +886,43 @@ main {
 }
 
 .copy-button.is-copied {
-  background: linear-gradient(135deg, #bb7d62, #e7b89b);
+  background: linear-gradient(135deg, #9d6d52, #caa383);
   color: #fffaf6;
   border-color: transparent;
+}
+
+.panel-divider {
+  height: 1px;
+  margin: 1.35rem 0 1.1rem;
+  background: linear-gradient(90deg, rgba(159, 113, 86, 0), rgba(159, 113, 86, 0.34), rgba(159, 113, 86, 0));
+}
+
+.panel-kicker-secondary {
+  margin-bottom: 1rem;
+}
+
+.panel-audience-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.panel-audience-item {
+  padding: 0.95rem 1rem;
+  border-radius: 1.15rem;
+  border: 1px solid rgba(103, 73, 56, 0.12);
+  background: rgba(250, 244, 239, 0.74);
+}
+
+.panel-audience-item strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.panel-audience-item p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
 .button-inline {
@@ -1000,7 +1022,6 @@ main {
   .two-up,
   .three-up,
   .flow-grid,
-  .audience-grid,
   .demo-reel-card,
   .provider-grid,
   .workflow-grid,
