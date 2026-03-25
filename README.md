@@ -1,61 +1,77 @@
 # NextAura
 
-NextAura is building deterministic agent systems that extend the tools,
-credentials, infrastructure, and AI access users already have.
+NextAura is building deterministic agent systems that help users turn the
+tools, credentials, infrastructure, and AI access they already have into real
+automation.
 
-The product direction is simple:
-- connect the stack already in use
-- verify what is actually production-ready
-- show only supported workflows
-- make ROI visible before commitment
-- let users choose the right model layer
-- generate a credible scaffold for the next implementation step
+The public site is live at [nextaura.fit](https://nextaura.fit).
 
-## What This Repo Contains
+## Core Thesis
 
+NextAura is betting that controlled and authorized parameters can unlock a much
+higher level of software throughput.
+
+The product direction is grounded in a simple belief:
+- good architecture should be easy to understand
+- users should extend what they already pay for instead of replacing it
+- production scaffolds should only appear after the system verifies what is
+  truly supported
+
+## What This Repository Shows
+
+This repository is the public-facing surface for the company.
+
+It currently includes:
 - the source for `nextaura.fit`
-- the company-facing product narrative
-- the public interactive demo
-- public-facing design and frontend experience work
+- the company narrative and product framing
+- a full interactive onboarding-style demo
+- public-facing design, UX, and message work
+- direct contact paths for demos, partnerships, and custom solutions
 
-## Current Public Message
+## Public Product Story
 
-NextAura is focused on software throughput through controlled, authorized
-parameters.
+The current public walkthrough follows the same six-step product motion shown on
+the site:
 
-That means:
-- workflows should be gated by real readiness, not wishful thinking
-- users should extend existing tool investments instead of replacing them
-- the experience should move from connection to deployment in a clear,
-  deterministic flow
+1. Connect the stack already in use.
+2. Verify prerequisites for production.
+3. Unlock only the workflows that are actually feasible.
+4. Show workflow-specific ROI.
+5. Match the workflow to the right model layer.
+6. Generate a scaffold that feels implementation-ready.
 
-## Site Structure
+The point is not to sell generic AI. The point is to make serious automation
+feel operational, credible, and measurable.
 
-- Hero: product framing and directional thesis
-- Interactive demo: a six-step walk through the current product model
-- Flow: the core user journey from tools to scaffold
-- Integrator fit: why the model is aligned with major API ecosystems
-- Contact: direct path for demos, partnerships, and custom builds
+## Why Keep A Public Repo
+
+Modern startups need a visible surface that people can inspect.
+
+For NextAura, this repo helps:
+- show product taste and execution quality in public
+- give API platforms and integration partners a clear picture of intent
+- let customers understand the product motion before a live conversation
+- create confidence that the company is building with discipline, not hype
 
 ## Design Direction
 
-The website intentionally leans warm, editorial, and polished rather than
-generic infrastructure blue.
+The public site is intentionally warm, editorial, and beauty-adjacent rather
+than generic enterprise blue.
 
-The goal is to feel:
-- modern
-- clear
-- feminine-leaning without losing technical credibility
-- visually distinctive enough to remember
+The design goals are:
+- memorable visual identity
+- high trust without sterile corporate language
+- feminine-leaning energy with technical credibility intact
+- a product demo that feels like a real surface, not a pitch deck
 
 ## Local Preview
 
-Open `index.html` directly in a browser for a fast local preview.
+Open `index.html` in a browser for a fast local preview.
 
-## Public Contact
+## Contact
 
-- Marco Lopez
-- `425-561-3474`
-- `mlopez@nextaura.fit`
+Marco Lopez  
+`425-561-3474`  
+`mlopez@nextaura.fit`
 
 All rights reserved unless explicitly stated otherwise.

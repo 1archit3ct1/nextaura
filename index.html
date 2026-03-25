@@ -148,61 +148,118 @@
         <section class="section" id="demo">
           <div class="section-heading">
             <p class="eyebrow">Interactive Demo</p>
-            <h2>A lightweight look at the product experience.</h2>
+            <h2>A fuller product walk-through.</h2>
             <p>
               This demo is illustrative, not connected to live credentials. It
-              shows how NextAura narrows from connected tools to a production-ready scaffold.
+              behaves like a small product surface so people can click through
+              the full motion from connected stack to generated scaffold.
             </p>
           </div>
-          <div class="demo-shell">
-            <div class="demo-nav" role="tablist" aria-label="NextAura demo steps">
-              <button class="demo-tab is-active" data-step="connect" role="tab" aria-selected="true">Connect</button>
-              <button class="demo-tab" data-step="prereqs" role="tab" aria-selected="false">Prereqs</button>
-              <button class="demo-tab" data-step="workflow" role="tab" aria-selected="false">Workflow</button>
-              <button class="demo-tab" data-step="roi" role="tab" aria-selected="false">ROI</button>
-              <button class="demo-tab" data-step="ai" role="tab" aria-selected="false">AI</button>
-              <button class="demo-tab" data-step="scaffold" role="tab" aria-selected="false">Scaffold</button>
+          <div class="demo-shell demo-shell-full">
+            <div class="demo-summary-row">
+              <div class="metric-card">
+                <span>Journey status</span>
+                <strong id="demo-summary-status">Connection stage in progress</strong>
+              </div>
+              <div class="metric-card">
+                <span>Selected workflow</span>
+                <strong id="demo-summary-workflow">PR Summarizer</strong>
+              </div>
+              <div class="metric-card">
+                <span>Projected monthly value</span>
+                <strong id="demo-summary-roi">$2,600</strong>
+              </div>
             </div>
 
-            <div class="demo-panel">
-              <div class="demo-copy">
-                <span class="demo-label" id="demo-label">Step 1</span>
-                <h3 id="demo-title">Connect the tools already in use.</h3>
-                <p id="demo-text">
-                  Slack, GitHub, Google, and Salesforce form the baseline. The
-                  system starts by measuring what is already real instead of
-                  asking the user to imagine a future stack.
-                </p>
-                <ul class="feature-list compact" id="demo-list">
-                  <li>Slack connected</li>
-                  <li>GitHub connected</li>
-                  <li>Google connected</li>
-                  <li>Salesforce not yet connected</li>
-                </ul>
-              </div>
+            <div class="demo-app">
+              <aside class="demo-sidebar">
+                <div class="demo-nav" role="tablist" aria-label="NextAura demo steps">
+                  <button class="demo-tab is-active" data-step="connect" role="tab" aria-selected="true">Connect</button>
+                  <button class="demo-tab" data-step="prereqs" role="tab" aria-selected="false">Prereqs</button>
+                  <button class="demo-tab" data-step="workflow" role="tab" aria-selected="false">Workflow</button>
+                  <button class="demo-tab" data-step="roi" role="tab" aria-selected="false">ROI</button>
+                  <button class="demo-tab" data-step="ai" role="tab" aria-selected="false">AI</button>
+                  <button class="demo-tab" data-step="scaffold" role="tab" aria-selected="false">Scaffold</button>
+                </div>
 
-              <div class="demo-visual">
-                <div class="demo-browser">
-                  <div class="browser-bar">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="demo-mini-stack">
+                  <span class="demo-label">Live State</span>
+                  <div class="mini-stat">
+                    <span>Connected providers</span>
+                    <strong id="mini-connected-count">3</strong>
                   </div>
-                  <div class="browser-body" id="demo-visual">
-                    <div class="status-row">
-                      <span class="status-pill success">Slack</span>
-                      <span class="status-pill success">GitHub</span>
-                      <span class="status-pill success">Google</span>
-                      <span class="status-pill muted">Salesforce</span>
-                    </div>
-                    <div class="metric-card">
-                      <span>Connected stack coverage</span>
-                      <strong>3 / 4 providers ready</strong>
-                    </div>
-                    <div class="metric-card">
-                      <span>Deterministic starting point</span>
-                      <strong>Supported workflows can now be narrowed.</strong>
-                    </div>
+                  <div class="mini-stat">
+                    <span>Prereqs ready</span>
+                    <strong id="mini-ready-count">3 / 5</strong>
+                  </div>
+                  <div class="mini-stat">
+                    <span>Model</span>
+                    <strong id="mini-model-choice">GPT-4.1</strong>
+                  </div>
+                  <button class="button button-secondary demo-reset" id="demo-reset" type="button">Reset demo</button>
+                </div>
+              </aside>
+
+              <div class="demo-browser demo-browser-full">
+                <div class="browser-bar">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <div class="demo-stage-header">
+                  <div>
+                    <span class="demo-label" id="demo-label">Step 1</span>
+                    <h3 id="demo-title">Connect the tools already in use.</h3>
+                  </div>
+                  <button class="button button-primary button-inline scaffold-trigger" id="open-scaffold" type="button">
+                    Preview Scaffold
+                  </button>
+                </div>
+
+                <p class="demo-stage-text" id="demo-text">
+                  Start by measuring what is already real instead of asking the
+                  user to imagine a future stack.
+                </p>
+
+                <div class="demo-stage-body" id="demo-stage"></div>
+              </div>
+            </div>
+
+            <div class="demo-drawer" id="demo-drawer" aria-hidden="true">
+              <div class="demo-drawer-card">
+                <div class="demo-drawer-header">
+                  <div>
+                    <span class="demo-label">Scaffold Preview</span>
+                    <h3 id="drawer-title">PR Summarizer Scaffold</h3>
+                  </div>
+                  <button class="drawer-close" id="close-scaffold" type="button" aria-label="Close scaffold preview">Close</button>
+                </div>
+                <div class="drawer-grid">
+                  <div class="drawer-column">
+                    <span class="proof-label">Included Files</span>
+                    <ul class="feature-list compact" id="drawer-files">
+                      <li>app/workflows/pr_summarizer.ts</li>
+                      <li>providers/github.ts</li>
+                      <li>providers/slack.ts</li>
+                      <li>deploy/vercel.json</li>
+                    </ul>
+                  </div>
+                  <div class="drawer-column">
+                    <span class="proof-label">Environment Contract</span>
+                    <ul class="feature-list compact" id="drawer-env">
+                      <li>GITHUB_TOKEN reference</li>
+                      <li>SLACK_BOT_TOKEN reference</li>
+                      <li>OPENAI_API_KEY reference</li>
+                      <li>WORKFLOW_REPO_OWNER / WORKFLOW_REPO_NAME</li>
+                    </ul>
+                  </div>
+                  <div class="drawer-column">
+                    <span class="proof-label">Launch Notes</span>
+                    <p id="drawer-notes">
+                      Generated after connection, readiness, workflow selection,
+                      ROI preview, and model choice align.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -317,23 +374,23 @@
         <section class="section" id="proof">
           <div class="section-heading">
             <p class="eyebrow">Proof</p>
-            <h2>The public repo exists to show direction, product taste, and execution quality.</h2>
+            <h2>The public repo gives partners, customers, and builders something real to inspect.</h2>
           </div>
           <div class="grid two-up">
             <article class="card">
               <h3>What is visible here</h3>
               <p>
-                The public layer focuses on the company story, the product flow,
-                safe proofs, and the experience quality around the NextAura
-                direction.
+                This repo shows the live site, the interactive walkthrough, and
+                the product narrative around how NextAura turns existing stack
+                investments into operational agent systems.
               </p>
             </article>
             <article class="card repo-card">
               <div>
                 <h3>NextAura public repository</h3>
                 <p>
-                  Explore the public website source and company-facing proof
-                  surface.
+                  Explore the public website source, product story, and demo
+                  experience work.
                 </p>
               </div>
               <a
