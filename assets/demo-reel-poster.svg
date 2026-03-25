@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#FDF3EC"/>
+  <circle cx="1320" cy="132" r="220" fill="#EFD0BE" fill-opacity="0.82"/>
+  <circle cx="220" cy="760" r="260" fill="#E4BCA4" fill-opacity="0.48"/>
+  <rect x="84" y="84" width="1432" height="732" rx="34" fill="#FFF7F1" stroke="#DDB8A1" stroke-opacity="0.7"/>
+  <text x="132" y="180" fill="#B87D63" font-family="Georgia, 'Times New Roman', serif" font-size="28" letter-spacing="7">NEXTAURA DEMO REEL</text>
+  <text x="132" y="312" fill="#3E261B" font-family="Georgia, 'Times New Roman', serif" font-size="82" font-weight="700">
+    <tspan x="132" dy="0">Deterministic agent systems</tspan>
+    <tspan x="132" dy="96">from connection to scaffold.</tspan>
+  </text>
+  <text x="132" y="492" fill="#744F41" font-family="Segoe UI, Arial, sans-serif" font-size="34">
+    <tspan x="132" dy="0">Connect trusted tools. Verify prerequisites. Show only supported workflows.</tspan>
+    <tspan x="132" dy="54">Make ROI visible. Match the model layer. Deliver a real starting point.</tspan>
+  </text>
+  <rect x="132" y="612" width="420" height="78" rx="39" fill="#BA7D62"/>
+  <text x="189" y="661" fill="#FFF9F4" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">Watch the product motion</text>
+</svg>

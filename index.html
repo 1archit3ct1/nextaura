@@ -26,7 +26,7 @@
       href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20260325d" />
   </head>
   <body>
     <div class="page-shell">
@@ -40,6 +40,7 @@
         </a>
         <nav class="site-nav" aria-label="Primary">
           <a href="#thesis">Thesis</a>
+          <a href="#audience">Audience</a>
           <a href="#demo">Demo</a>
           <a href="#flow">Flow</a>
           <a href="#integrators">Integrators</a>
@@ -145,6 +146,50 @@
           </div>
         </section>
 
+        <section class="section" id="audience">
+          <div class="section-heading">
+            <p class="eyebrow">Who This Is For</p>
+            <h2>Built for people who want real software pathways, not vague promises.</h2>
+            <p>
+              NextAura is for people trying to understand what it actually takes
+              to launch serious, credentialed software through the platforms
+              they already trust.
+            </p>
+          </div>
+          <div class="grid two-up audience-grid">
+            <article class="card audience-card audience-card-primary">
+              <h3>Anyone launching real credentialed solutions</h3>
+              <p>
+                NextAura is for anyone interested in launching real credentialed
+                solutions through platforms they already trust.
+              </p>
+            </article>
+            <article class="card audience-card">
+              <h3>People new to coding who want clarity</h3>
+              <p>
+                It offers those new to coding an opportunity to learn about the
+                credential landscapes and software tools needed to build real
+                architecture.
+              </p>
+            </article>
+            <article class="card audience-card">
+              <h3>Users tired of fake automation claims</h3>
+              <p>
+                It is for users frustrated with traditional automated coding
+                apps that promise results but do not deliver without high costs.
+              </p>
+            </article>
+            <article class="card audience-card">
+              <h3>People burned by hidden deployment costs</h3>
+              <p>
+                It is for users frustrated after spending many hours inside AI
+                coding tools only to discover that real deployment, model, and
+                compute costs are far higher than expected.
+              </p>
+            </article>
+          </div>
+        </section>
+
         <section class="section" id="demo">
           <div class="section-heading">
             <p class="eyebrow">Interactive Demo</p>
@@ -154,6 +199,31 @@
               behaves like a small product surface so people can click through
               the full motion from connected stack to generated scaffold.
             </p>
+          </div>
+          <div class="demo-reel-card">
+            <div class="demo-reel-copy">
+              <span class="proof-label">Quick Reel</span>
+              <h3>Watch the product motion before clicking through it.</h3>
+              <p>
+                This reel shows the deterministic path from connected tools to
+                scaffold delivery, then the interactive demo below lets people
+                inspect each step in more detail.
+              </p>
+            </div>
+            <div class="demo-reel-frame">
+              <video
+                class="demo-reel-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                controls
+                preload="auto"
+                poster="./assets/demo-reel-poster.svg?v=20260325d"
+              >
+                <source src="./assets/nextaura-demo-reel.mp4?v=20260325d" type="video/mp4" />
+              </video>
+            </div>
           </div>
           <div class="demo-shell demo-shell-full">
             <div class="demo-summary-row">
@@ -406,6 +476,6 @@
       </main>
     </div>
 
-    <script src="./script.js"></script>
+    <script src="./script.js?v=20260325d"></script>
   </body>
 </html>
