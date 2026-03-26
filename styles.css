@@ -836,6 +836,65 @@ main {
   gap: 1.2rem;
 }
 
+.dashboard-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.dashboard-card h3 {
+  margin: 0;
+}
+
+.dashboard-feature-list {
+  margin-top: 0.1rem;
+}
+
+.dashboard-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 0.3rem;
+}
+
+.dashboard-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.9rem;
+  padding: 0 0.8rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(141, 103, 79, 0.16);
+  border: 1px solid rgba(141, 103, 79, 0.28);
+  color: #5c3f2f;
+}
+
+.dashboard-chip.is-live {
+  background: rgba(47, 120, 74, 0.17);
+  border-color: rgba(47, 120, 74, 0.32);
+  color: #1d5a35;
+}
+
+.dashboard-domain {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.dashboard-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.35rem;
+}
+
+.dashboard-card-notes {
+  justify-content: center;
+}
+
 .contact-shell {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr 1fr;
@@ -1042,6 +1101,10 @@ main {
 
   .repo-card {
     justify-content: stretch;
+  }
+
+  .dashboard-actions .button {
+    width: 100%;
   }
 
   .site-header {

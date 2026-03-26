@@ -790,6 +790,41 @@ document.addEventListener("keydown", (event) => {
 });
 
 const copyButtons = document.querySelectorAll("[data-copy-target]");
+const fundingdashDemoLink = document.getElementById("fundingdash-demo-link");
+const fundingdashStatus = document.getElementById("fundingdash-status");
+
+async function hydrateFundingdashLink() {
+  if (!fundingdashDemoLink || !fundingdashStatus) {
+    return;
+  }
+
+  const metadataUrl =
+    "https://raw.githubusercontent.com/1archit3ct1/fundingdash/main/metadata.json";
+
+  try {
+    const response = await fetch(metadataUrl, { cache: "no-store" });
+    if (!response.ok) {
+      return;
+    }
+
+    const metadata = await response.json();
+    const publicDemoUrl =
+      metadata && typeof metadata.publicDemoUrl === "string"
+        ? metadata.publicDemoUrl.trim()
+        : "";
+
+    if (!publicDemoUrl) {
+      return;
+    }
+
+    fundingdashDemoLink.href = publicDemoUrl;
+    fundingdashDemoLink.textContent = "Open Live Demo";
+    fundingdashStatus.textContent = "Live demo linked";
+    fundingdashStatus.classList.add("is-live");
+  } catch {
+    // Keep defaults if metadata is unavailable.
+  }
+}
 
 copyButtons.forEach((button) => {
   button.addEventListener("click", async () => {
@@ -815,3 +850,4 @@ copyButtons.forEach((button) => {
 });
 
 renderDemo();
+hydrateFundingdashLink();
