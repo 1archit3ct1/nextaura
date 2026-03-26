@@ -26,7 +26,7 @@
       href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260326b" />
+    <link rel="stylesheet" href="./styles.css?v=20260326c" />
   </head>
   <body>
     <div class="page-shell">
@@ -92,42 +92,154 @@
 
           <aside class="hero-panel">
             <div class="panel-frame">
-              <div class="panel-kicker">Current Direction</div>
-              <div class="signal-list">
+              <div class="hero-showcase-head">
                 <div>
-                  <span>Core idea</span>
-                  <p>Extend what users already pay for instead of forcing a platform reset.</p>
+                  <div class="panel-kicker">Interactive Showcase</div>
+                  <h2 class="hero-showcase-title">Two views into what NextAura actually ships.</h2>
                 </div>
-                <div>
-                  <span>Constraint</span>
-                  <p>Prerequisites and approvals matter. Unsupported setups should stay visibly locked.</p>
-                </div>
-                <div>
-                  <span>Outcome</span>
-                  <p>Readiness, ROI, model choice, and scaffold generation collapse into one coherent flow.</p>
+                <div class="hero-view-toggle" role="tablist" aria-label="Hero showcase views">
+                  <button
+                    class="hero-view-button is-active"
+                    id="hero-view-platform"
+                    type="button"
+                    data-hero-view="platform"
+                    role="tab"
+                    aria-selected="true"
+                  >
+                    Platform View
+                  </button>
+                  <button
+                    class="hero-view-button"
+                    id="hero-view-build"
+                    type="button"
+                    data-hero-view="build"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    Live Build View
+                  </button>
                 </div>
               </div>
-              <div class="panel-divider"></div>
-              <div class="panel-audience" id="hero-fit">
-                <span class="panel-kicker panel-kicker-secondary">Who This Is For</span>
-                <div class="panel-audience-list">
-                  <div class="panel-audience-item">
-                    <strong>Anyone launching real credentialed solutions</strong>
-                    <p>Built for people trying to launch through platforms they already trust.</p>
+
+              <div class="hero-view-panels">
+                <section
+                  class="hero-view-panel is-active"
+                  id="hero-view-panel-platform"
+                  data-hero-panel="platform"
+                  role="tabpanel"
+                  aria-labelledby="hero-view-platform"
+                >
+                  <div class="signal-list">
+                    <div>
+                      <span>Core idea</span>
+                      <p>Extend what users already pay for instead of forcing a platform reset.</p>
+                    </div>
+                    <div>
+                      <span>Constraint</span>
+                      <p>Prerequisites and approvals matter. Unsupported setups should stay visibly locked.</p>
+                    </div>
+                    <div>
+                      <span>Outcome</span>
+                      <p>Readiness, ROI, model choice, and scaffold generation collapse into one coherent flow.</p>
+                    </div>
                   </div>
-                  <div class="panel-audience-item">
-                    <strong>People new to coding who want clarity</strong>
-                    <p>Shows the credential landscape and software tools needed to build real architecture.</p>
+
+                  <div class="panel-divider"></div>
+
+                  <div class="panel-audience" id="hero-fit">
+                    <span class="panel-kicker panel-kicker-secondary">Who This Is For</span>
+                    <div class="panel-audience-list">
+                      <div class="panel-audience-item">
+                        <strong>Anyone launching real credentialed solutions</strong>
+                        <p>Built for people trying to launch through platforms they already trust.</p>
+                      </div>
+                      <div class="panel-audience-item">
+                        <strong>People new to coding who want clarity</strong>
+                        <p>Shows the credential landscape and software tools needed to build real architecture.</p>
+                      </div>
+                      <div class="panel-audience-item">
+                        <strong>Users tired of fake automation claims</strong>
+                        <p>For people frustrated with coding apps that promise results but hide the true cost.</p>
+                      </div>
+                      <div class="panel-audience-item">
+                        <strong>People burned by deployment and compute costs</strong>
+                        <p>For users who spent hours iterating before discovering the real infrastructure bill later.</p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="panel-audience-item">
-                    <strong>Users tired of fake automation claims</strong>
-                    <p>For people frustrated with coding apps that promise results but hide the true cost.</p>
+
+                  <div class="hero-view-footer">
+                    <span class="hero-inline-chip">Only real workflows</span>
+                    <span class="hero-inline-chip">Readiness before hype</span>
                   </div>
-                  <div class="panel-audience-item">
-                    <strong>People burned by deployment and compute costs</strong>
-                    <p>For users who spent hours iterating before discovering the real infrastructure bill later.</p>
+                </section>
+
+                <section
+                  class="hero-view-panel"
+                  id="hero-view-panel-build"
+                  data-hero-panel="build"
+                  role="tabpanel"
+                  aria-labelledby="hero-view-build"
+                  hidden
+                >
+                  <div class="hero-build-shell">
+                    <div class="hero-build-copy">
+                      <span class="panel-kicker panel-kicker-secondary">FundingDash Case Study</span>
+                      <h3>Real integration speed, not hand-wavy claims.</h3>
+                      <p>
+                        NextAura used Gemini-backed validation to turn a dashboard idea into a public,
+                        secured Vercel deployment in one tracked sprint. The timing below is measured from
+                        git history and the actual Vercel publish logs.
+                      </p>
+                    </div>
+
+                    <div class="hero-metric-grid">
+                      <article class="hero-metric-card hero-metric-card-primary">
+                        <span class="proof-label">Git-tracked delivery window</span>
+                        <strong id="hero-metric-integration">1h 10m</strong>
+                        <p>From first Gemini integration commit to production deployment commit.</p>
+                      </article>
+                      <article class="hero-metric-card">
+                        <span class="proof-label">Local production build</span>
+                        <strong id="hero-metric-build">2.14s</strong>
+                        <p>Measured from the verified FundingDash build before publish.</p>
+                      </article>
+                      <article class="hero-metric-card">
+                        <span class="proof-label">Vercel production publish</span>
+                        <strong id="hero-metric-deploy">23s</strong>
+                        <p>Measured from the successful production alias deployment to FundingDash.</p>
+                      </article>
+                      <article class="hero-metric-card">
+                        <span class="proof-label">Tracked tasks completed</span>
+                        <strong id="hero-metric-tasks">11 / 11</strong>
+                        <p>Security, data, resilience, CI, docs, and deployment all landed in the same loop.</p>
+                      </article>
+                    </div>
+
+                    <div class="hero-build-strip">
+                      <div class="hero-build-strip-item">
+                        <span>Model path</span>
+                        <strong>Gemini API + deterministic fallback</strong>
+                      </div>
+                      <div class="hero-build-strip-item">
+                        <span>Ship target</span>
+                        <strong>Public dashboard on Vercel</strong>
+                      </div>
+                    </div>
+
+                    <div class="hero-build-actions">
+                      <a
+                        class="button button-primary"
+                        id="hero-live-demo-link"
+                        href="https://fundingdash.vercel.app"
+                        target="_blank"
+                        rel="noreferrer"
+                        >Open Live Dashboard</a
+                      >
+                      <a class="button button-secondary" href="#early-builds">See the case study</a>
+                    </div>
                   </div>
-                </div>
+                </section>
               </div>
             </div>
           </aside>
@@ -514,6 +626,6 @@
       </main>
     </div>
 
-    <script src="./script.js?v=20260326b"></script>
+    <script src="./script.js?v=20260326c"></script>
   </body>
 </html>

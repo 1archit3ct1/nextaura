@@ -793,6 +793,81 @@ const copyButtons = document.querySelectorAll("[data-copy-target]");
 const fundingdashDemoLink = document.getElementById("fundingdash-demo-link");
 const fundingdashStatus = document.getElementById("fundingdash-status");
 const fundingdashReadiness = document.getElementById("fundingdash-readiness");
+const heroLiveDemoLink = document.getElementById("hero-live-demo-link");
+const heroMetricIntegration = document.getElementById("hero-metric-integration");
+const heroMetricBuild = document.getElementById("hero-metric-build");
+const heroMetricDeploy = document.getElementById("hero-metric-deploy");
+const heroMetricTasks = document.getElementById("hero-metric-tasks");
+const heroViewButtons = document.querySelectorAll("[data-hero-view]");
+const heroViewPanels = document.querySelectorAll("[data-hero-panel]");
+
+const heroMetrics = {
+  integration: "1h 10m",
+  build: "2.14s",
+  deploy: "23s",
+  tasks: "11 / 11",
+};
+
+function setHeroView(nextView) {
+  heroViewButtons.forEach((button) => {
+    const isActive = button.dataset.heroView === nextView;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-selected", String(isActive));
+  });
+
+  heroViewPanels.forEach((panel) => {
+    const isActive = panel.dataset.heroPanel === nextView;
+    panel.classList.toggle("is-active", isActive);
+    panel.hidden = !isActive;
+  });
+}
+
+function hydrateHeroMetrics() {
+  if (heroMetricIntegration) {
+    heroMetricIntegration.textContent = heroMetrics.integration;
+  }
+
+  if (heroMetricBuild) {
+    heroMetricBuild.textContent = heroMetrics.build;
+  }
+
+  if (heroMetricDeploy) {
+    heroMetricDeploy.textContent = heroMetrics.deploy;
+  }
+
+  if (heroMetricTasks) {
+    heroMetricTasks.textContent = heroMetrics.tasks;
+  }
+}
+
+function getTaskCompletionMetrics(taskStatus) {
+  const steps = taskStatus && typeof taskStatus === "object" ? taskStatus.steps : null;
+
+  if (!steps || typeof steps !== "object") {
+    return null;
+  }
+
+  let total = 0;
+  let completed = 0;
+
+  Object.values(steps).forEach((step) => {
+    const items = step && typeof step === "object" ? step.items : null;
+
+    if (!items || typeof items !== "object") {
+      return;
+    }
+
+    Object.values(items).forEach((item) => {
+      total += 1;
+
+      if (item && typeof item === "object" && item.status === "green") {
+        completed += 1;
+      }
+    });
+  });
+
+  return total > 0 ? { completed, total } : null;
+}
 
 async function hydrateFundingdashLink() {
   if (!fundingdashDemoLink || !fundingdashStatus || !fundingdashReadiness) {
@@ -829,6 +904,10 @@ async function hydrateFundingdashLink() {
     fundingdashStatus.textContent = "Live demo linked";
     fundingdashStatus.classList.add("is-live");
 
+    if (heroLiveDemoLink) {
+      heroLiveDemoLink.href = publicDemoUrl;
+    }
+
     if (!taskStatusResponse.ok) {
       return;
     }
@@ -840,6 +919,11 @@ async function hydrateFundingdashLink() {
       Object.values(steps).every(
         (step) => step && typeof step === "object" && step.overall === "green"
       );
+    const taskMetrics = getTaskCompletionMetrics(taskStatus);
+
+    if (taskMetrics && heroMetricTasks) {
+      heroMetricTasks.textContent = `${taskMetrics.completed} / ${taskMetrics.total}`;
+    }
 
     fundingdashReadiness.textContent = allGreen ? "Launch-ready" : "Readiness in progress";
     fundingdashReadiness.classList.add(allGreen ? "is-ready" : "is-progress");
@@ -847,6 +931,12 @@ async function hydrateFundingdashLink() {
     // Keep defaults if metadata is unavailable.
   }
 }
+
+heroViewButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setHeroView(button.dataset.heroView || "platform");
+  });
+});
 
 copyButtons.forEach((button) => {
   button.addEventListener("click", async () => {
@@ -871,5 +961,7 @@ copyButtons.forEach((button) => {
   });
 });
 
+hydrateHeroMetrics();
+setHeroView("platform");
 renderDemo();
 hydrateFundingdashLink();

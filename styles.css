@@ -250,6 +250,167 @@ main {
   overflow: hidden;
 }
 
+.hero-showcase-head {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.2rem;
+}
+
+.hero-showcase-title {
+  margin: 0;
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(1.7rem, 2.4vw, 2.45rem);
+  line-height: 1.05;
+}
+
+.hero-view-toggle {
+  display: inline-flex;
+  gap: 0.35rem;
+  padding: 0.35rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 250, 244, 0.56);
+}
+
+.hero-view-button {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.hero-view-button.is-active {
+  background: linear-gradient(135deg, #8d6248, #b8916d);
+  color: #fffaf6;
+}
+
+.hero-view-panel {
+  display: block;
+}
+
+.hero-view-panel[hidden] {
+  display: none;
+}
+
+.hero-view-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+}
+
+.hero-inline-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.1rem;
+  padding: 0 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 250, 244, 0.52);
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-build-shell {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero-build-copy h3 {
+  margin: 0 0 0.65rem;
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(1.7rem, 2.4vw, 2.4rem);
+  line-height: 1.08;
+}
+
+.hero-build-copy p,
+.hero-metric-card p,
+.hero-build-strip-item span {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.hero-build-copy p,
+.hero-metric-card p {
+  margin: 0;
+}
+
+.hero-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.hero-metric-card {
+  border: 1px solid var(--line);
+  border-radius: 1.4rem;
+  background: rgba(255, 250, 244, 0.56);
+  padding: 1rem;
+}
+
+.hero-metric-card strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  line-height: 1;
+}
+
+.hero-metric-card-primary {
+  background: linear-gradient(180deg, rgba(141, 98, 72, 0.94), rgba(184, 145, 109, 0.9));
+  color: #fffaf6;
+}
+
+.hero-metric-card-primary .proof-label,
+.hero-metric-card-primary p {
+  color: rgba(255, 250, 244, 0.88);
+}
+
+.hero-build-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.hero-build-strip-item {
+  padding: 0.95rem 1rem;
+  border-radius: 1.2rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 250, 244, 0.52);
+}
+
+.hero-build-strip-item span {
+  display: block;
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.hero-build-strip-item strong {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.hero-build-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
 .panel-frame::before,
 .card::before,
 .proof-card::before,
@@ -1123,6 +1284,23 @@ main {
     flex-direction: column;
     gap: 0.8rem;
   }
+
+  .hero-showcase-head {
+    flex-direction: column;
+  }
+
+  .hero-view-toggle,
+  .hero-build-strip,
+  .hero-metric-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    display: grid;
+  }
+
+  .hero-view-toggle {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 700px) {
@@ -1152,5 +1330,10 @@ main {
 
   .hero h1 {
     max-width: none;
+  }
+
+  .hero-build-actions .button,
+  .hero-view-button {
+    width: 100%;
   }
 }
