@@ -879,6 +879,18 @@ main {
   color: #1d5a35;
 }
 
+.dashboard-chip.is-ready {
+  background: rgba(44, 103, 130, 0.16);
+  border-color: rgba(44, 103, 130, 0.3);
+  color: #214d61;
+}
+
+.dashboard-chip.is-progress {
+  background: rgba(157, 110, 28, 0.15);
+  border-color: rgba(157, 110, 28, 0.28);
+  color: #7a5311;
+}
+
 .dashboard-domain {
   font-size: 0.82rem;
   color: var(--muted);

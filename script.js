@@ -792,22 +792,29 @@ document.addEventListener("keydown", (event) => {
 const copyButtons = document.querySelectorAll("[data-copy-target]");
 const fundingdashDemoLink = document.getElementById("fundingdash-demo-link");
 const fundingdashStatus = document.getElementById("fundingdash-status");
+const fundingdashReadiness = document.getElementById("fundingdash-readiness");
 
 async function hydrateFundingdashLink() {
-  if (!fundingdashDemoLink || !fundingdashStatus) {
+  if (!fundingdashDemoLink || !fundingdashStatus || !fundingdashReadiness) {
     return;
   }
 
   const metadataUrl =
     "https://raw.githubusercontent.com/1archit3ct1/fundingdash/main/metadata.json";
+  const taskStatusUrl =
+    "https://raw.githubusercontent.com/1archit3ct1/fundingdash/main/task_status.json";
 
   try {
-    const response = await fetch(metadataUrl, { cache: "no-store" });
-    if (!response.ok) {
+    const [metadataResponse, taskStatusResponse] = await Promise.all([
+      fetch(metadataUrl, { cache: "no-store" }),
+      fetch(taskStatusUrl, { cache: "no-store" }),
+    ]);
+
+    if (!metadataResponse.ok) {
       return;
     }
 
-    const metadata = await response.json();
+    const metadata = await metadataResponse.json();
     const publicDemoUrl =
       metadata && typeof metadata.publicDemoUrl === "string"
         ? metadata.publicDemoUrl.trim()
@@ -821,6 +828,21 @@ async function hydrateFundingdashLink() {
     fundingdashDemoLink.textContent = "Open Live Demo";
     fundingdashStatus.textContent = "Live demo linked";
     fundingdashStatus.classList.add("is-live");
+
+    if (!taskStatusResponse.ok) {
+      return;
+    }
+
+    const taskStatus = await taskStatusResponse.json();
+    const steps = taskStatus && typeof taskStatus === "object" ? taskStatus.steps : null;
+    const allGreen =
+      steps &&
+      Object.values(steps).every(
+        (step) => step && typeof step === "object" && step.overall === "green"
+      );
+
+    fundingdashReadiness.textContent = allGreen ? "Launch-ready" : "Readiness in progress";
+    fundingdashReadiness.classList.add(allGreen ? "is-ready" : "is-progress");
   } catch {
     // Keep defaults if metadata is unavailable.
   }
