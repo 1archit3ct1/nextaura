@@ -1052,20 +1052,11 @@ main {
   color: #7a5311;
 }
 
-.dashboard-domain {
-  font-size: 0.82rem;
-  color: var(--muted);
-}
-
 .dashboard-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 0.35rem;
-}
-
-.dashboard-card-notes {
-  justify-content: center;
 }
 
 .contact-shell {
