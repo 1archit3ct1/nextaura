@@ -610,6 +610,27 @@
           </div>
         </section>
       </main>
+
+      <footer class="site-footer" style="background: var(--bg-secondary); padding: 40px 20px; margin-top: 80px; border-top: 1px solid var(--border);">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <img src="./assets/nextaura-mark.svg" alt="NextAura" style="width: 32px; height: 32px;" />
+            <span style="font-family: 'Bodoni Moda', serif; font-size: 18px; font-weight: 600;">NextAura</span>
+          </div>
+          <div style="display: flex; gap: 24px; align-items: center;">
+            <a href="./privacy.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">Privacy Policy</a>
+            <a href="#contact" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">Contact</a>
+            <a href="https://github.com/1archit3ct1/nextaura" target="_blank" rel="noreferrer" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">GitHub</a>
+          </div>
+          <div style="color: var(--text-muted); font-size: 13px;">
+            &copy; <span id="footer-year"></span> NextAura Inc.
+          </div>
+        </div>
+      </footer>
+
+      <script>
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+      </script>
     </div>
 
     <script src="./script.js?v=20260326c"></script>
