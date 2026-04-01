@@ -89,67 +89,6 @@ a {
   background: rgba(243, 236, 227, 0.84);
 }
 
-.contact-panel {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 2px;
-}
-
-.contact-name {
-  font-family: 'Bodoni Moda', serif;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--text);
-}
-
-.contact-detail {
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.contact-title {
-  font-size: 12px;
-  color: var(--rose-brown);
-  font-weight: 500;
-}
-
-.contact-links {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.contact-linkedin {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  background: #0A66C2;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 13px;
-  transition: transform 180ms ease, box-shadow 180ms ease;
-}
-
-.contact-linkedin:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
-}
-
-.contact-linkedin img {
-  width: 16px;
-  height: 16px;
-}
-
 .brand-lockup {
   display: inline-flex;
   gap: 0.9rem;
@@ -165,14 +104,103 @@ a {
 }
 
 .site-nav {
-  display: inline-flex;
-  gap: 1.4rem;
-  font-size: 0.95rem;
-  color: var(--muted);
+  display: flex;
+  gap: 1.5rem;
 }
 
 .site-nav a {
+  color: var(--text);
   text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 180ms ease;
+}
+
+.site-nav a:hover {
+  color: var(--rose-brown);
+}
+
+.contact-card-container {
+  max-width: var(--max);
+  margin: 1.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(96, 71, 53, 0.12);
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.contact-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 180px;
+}
+
+.contact-card-name {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.contact-card-title {
+  font-size: 13px;
+  color: var(--rose-brown);
+  font-weight: 500;
+}
+
+.contact-card-body {
+  flex: 1;
+  min-width: 200px;
+}
+
+.contact-card-email {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 180ms ease;
+}
+
+.contact-card-email:hover {
+  color: var(--text);
+}
+
+.contact-card-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.contact-card-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: #0A66C2;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.contact-card-linkedin:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
+}
+
+.contact-card-linkedin img {
+  width: 16px;
+  height: 16px;
 }
 
 main {
@@ -1337,19 +1365,23 @@ main {
     gap: 0.8rem;
   }
 
-  .contact-panel {
-    flex-direction: column;
-    gap: 12px;
+  .site-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
   }
 
-  .contact-info {
+  .contact-card {
+    flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  .contact-links {
-    flex-direction: row;
-    flex-wrap: wrap;
+  .contact-card-header {
+    align-items: center;
+  }
+
+  .contact-card-links {
     justify-content: center;
   }
 
