@@ -89,6 +89,67 @@ a {
   background: rgba(243, 236, 227, 0.84);
 }
 
+.contact-panel {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.contact-name {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.contact-detail {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.contact-title {
+  font-size: 12px;
+  color: var(--rose-brown);
+  font-weight: 500;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #0A66C2;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.contact-linkedin:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
+}
+
+.contact-linkedin img {
+  width: 16px;
+  height: 16px;
+}
+
 .brand-lockup {
   display: inline-flex;
   gap: 0.9rem;
@@ -1274,6 +1335,22 @@ main {
   .site-header {
     flex-direction: column;
     gap: 0.8rem;
+  }
+
+  .contact-panel {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contact-info {
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .hero-showcase-head {
