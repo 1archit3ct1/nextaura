@@ -79,36 +79,38 @@ a {
   position: sticky;
   top: 0;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
   backdrop-filter: blur(20px);
   background: rgba(243, 236, 227, 0.95);
   border-bottom: 1px solid rgba(96, 71, 53, 0.08);
 }
 
-.header-brand {
-  display: flex;
-  justify-content: center;
-  padding: 2rem 1.5rem 1.5rem;
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
 }
 
-.header-logo {
-  max-width: 400px;
-  width: 100%;
-  height: auto;
+.brand-lockup img {
+  height: 28px;
+  width: auto;
   object-fit: contain;
 }
 
 .site-nav {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem 1.5rem;
-  border-top: 1px solid rgba(96, 71, 53, 0.06);
+  gap: 1.5rem;
 }
 
 .site-nav a {
   color: var(--text);
   text-decoration: none;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -126,25 +128,44 @@ a {
 }
 
 .integrator-narrow {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
+  margin-top: 2rem;
 }
 
 .integrator-narrow .section-heading h2 {
   max-width: 100%;
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  line-height: 1.3;
 }
 
 .integrator-cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  gap: 0.8rem;
+  margin-top: 1rem;
 }
 
 .hero-contact-card {
   margin-bottom: 0.5rem;
+}
+
+.contact-intro {
+  margin-bottom: 1rem;
+}
+
+.contact-intro .eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.contact-intro h3 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--text);
 }
 
 .contact-card {
@@ -1365,10 +1386,6 @@ main {
   .three-up,
   .flow-grid,
   .demo-reel-card,
-  .provider-grid,
-  .workflow-grid,
-  .model-grid,
-  .check-grid,
   .roi-grid,
   .scaffold-summary,
   .drawer-grid,
@@ -1382,11 +1399,36 @@ main {
     display: grid;
   }
 
-  .demo-app {
-    gap: 0.8rem;
+  .provider-grid,
+  .workflow-grid,
+  .model-grid,
+  .check-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
   }
 
-  .demo-sidebar {
+  .provider-chip,
+  .workflow-option,
+  .model-option,
+  .check-item {
+    padding: 0.75rem;
+    border-radius: 1rem;
+    font-size: 13px;
+  }
+
+  .provider-chip h4,
+  .workflow-option h4 {
+    font-size: 14px;
+    margin-bottom: 0.35rem;
+  }
+
+  .provider-chip p,
+  .workflow-option p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .demo-app {
     gap: 0.8rem;
   }
 
@@ -1399,29 +1441,31 @@ main {
   }
 
   .site-header {
-    border-bottom: none;
-  }
-
-  .header-brand {
-    padding: 1.5rem 1rem 1rem;
-  }
-
-  .header-logo {
-    max-width: 280px;
-  }
-
-  .site-nav {
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 0.8rem;
     padding: 0.8rem 1rem;
   }
 
+  .brand-lockup img {
+    height: 35px;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
   .site-nav a {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .hero-contact-card {
     margin-bottom: 0.5rem;
+  }
+
+  .contact-intro h3 {
+    font-size: 1.4rem;
   }
 
   .hero-showcase-head {

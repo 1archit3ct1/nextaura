@@ -34,10 +34,10 @@
       <div class="backdrop backdrop-top"></div>
       <div class="backdrop backdrop-bottom"></div>
 
-      <div class="site-header">
-        <div class="header-brand">
-          <img src="./assets/nextaura_logo_final.jpg" alt="NextAura" class="header-logo" />
-        </div>
+      <header class="site-header">
+        <a class="brand-lockup" href="#top" aria-label="NextAura home">
+          <img src="./assets/nextaura_logo_final.jpg" alt="NextAura" />
+        </a>
         <nav class="site-nav" aria-label="Primary">
           <a href="#thesis">Thesis</a>
           <a href="#hero-fit">Audience</a>
@@ -48,7 +48,7 @@
           <a href="#contact">Contact</a>
           <a href="#proof">Proof</a>
         </nav>
-      </div>
+      </header>
 
       <main id="top">
         <section class="hero">
@@ -88,10 +88,41 @@
                 <p>When the prerequisites are real, the output should be deployable, not aspirational.</p>
               </div>
             </div>
+
+            <section class="integrator-narrow">
+              <div class="section-heading">
+                <p class="eyebrow">Integrator Fit</p>
+                <h2>NextAura is built to activate more value from the API ecosystems users already depend on.</h2>
+              </div>
+              <div class="integrator-cards">
+                <article class="card">
+                  <h3>Why this matters to platforms</h3>
+                  <ul class="feature-list compact">
+                    <li>More qualified API usage instead of shallow experimentation</li>
+                    <li>Higher retention through workflows that attach to existing systems</li>
+                    <li>Users get clear reasons to finish setup and grant the right scopes</li>
+                    <li>Integrations become operational, not decorative</li>
+                  </ul>
+                </article>
+                <article class="card">
+                  <h3>Why this matters to users</h3>
+                  <ul class="feature-list compact">
+                    <li>They see exactly what they can launch with their current stack</li>
+                    <li>They get a readiness roadmap before committing engineering time</li>
+                    <li>They can compare workflow value before choosing the model layer</li>
+                    <li>They leave with a scaffold instead of a vague recommendation</li>
+                  </ul>
+                </article>
+              </div>
+            </section>
           </div>
 
           <aside class="hero-panel">
             <div class="hero-contact-card">
+              <div class="contact-intro">
+                <p class="eyebrow">Contact</p>
+                <h3>Demos, partnerships, and custom solutions.</h3>
+              </div>
               <div class="contact-card">
                 <div class="contact-card-header">
                   <strong class="contact-card-name">Marco Lopez</strong>
@@ -240,66 +271,6 @@
               </div>
             </div>
           </aside>
-        </section>
-
-        <section class="section integrator-narrow" id="integrators">
-          <div class="section-heading">
-            <p class="eyebrow">Integrator Fit</p>
-            <h2>NextAura is built to activate more value from the API ecosystems users already depend on.</h2>
-          </div>
-          <div class="integrator-cards">
-            <article class="card">
-              <h3>Why this matters to platforms</h3>
-              <ul class="feature-list compact">
-                <li>More qualified API usage instead of shallow experimentation</li>
-                <li>Higher retention through workflows that attach to existing systems</li>
-                <li>Users get clear reasons to finish setup and grant the right scopes</li>
-                <li>Integrations become operational, not decorative</li>
-              </ul>
-            </article>
-            <article class="card">
-              <h3>Why this matters to users</h3>
-              <ul class="feature-list compact">
-                <li>They see exactly what they can launch with their current stack</li>
-                <li>They get a readiness roadmap before committing engineering time</li>
-                <li>They can compare workflow value before choosing the model layer</li>
-                <li>They leave with a scaffold instead of a vague recommendation</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="contact">
-          <div class="section-heading">
-            <p class="eyebrow">Contact</p>
-            <h2>Demos, partnerships, and custom solutions.</h2>
-            <p>
-              Reach out directly if you want a walkthrough, an integration conversation,
-              or a custom build discussion.
-            </p>
-          </div>
-          <div class="contact-shell">
-            <article class="card contact-card contact-card-primary">
-              <span class="proof-label">Primary Contact</span>
-              <h3>Marco Lopez</h3>
-              <p>
-                For demos, custom solutions, and partnership conversations.
-              </p>
-            </article>
-            <article class="card contact-card">
-              <span class="proof-label">Phone</span>
-              <strong class="contact-value" id="contact-phone">425-561-3474</strong>
-              <button class="copy-button" data-copy-target="contact-phone" type="button">Copy phone</button>
-            </article>
-            <article class="card contact-card">
-              <span class="proof-label">Email</span>
-              <strong class="contact-value" id="contact-email">mlopez@nextaura.fit</strong>
-              <div class="contact-actions">
-                <button class="copy-button" data-copy-target="contact-email" type="button">Copy email</button>
-                <a class="button button-secondary button-inline" href="mailto:mlopez@nextaura.fit">Email now</a>
-              </div>
-            </article>
-          </div>
         </section>
 
         <section class="section" id="thesis">
