@@ -101,6 +101,7 @@ a {
 .brand-lockup img {
   width: 2.3rem;
   height: 2.3rem;
+  object-fit: contain;
 }
 
 .site-nav a {
@@ -127,34 +128,6 @@ a {
   padding: 0 1.5rem;
 }
 
-.integrator-section {
-  padding: 2rem 0;
-}
-
-.integrator-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.integrator-card {
-  background: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(96, 71, 53, 0.12);
-  border-radius: 12px;
-  padding: 20px;
-}
-
-.integrator-card h3 {
-  font-family: 'Bodoni Moda', serif;
-  font-size: 16px;
-  font-weight: 600;
-  margin: 0 0 12px;
-  color: var(--text);
-}
-
 .hero-contact-card {
   margin-bottom: 0.5rem;
 }
@@ -170,6 +143,7 @@ a {
   align-items: center;
   gap: 6px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  width: 100%;
 }
 
 .contact-card-header {
@@ -178,6 +152,7 @@ a {
   align-items: center;
   gap: 2px;
   text-align: center;
+  width: 100%;
 }
 
 .contact-card-name {
@@ -185,18 +160,19 @@ a {
   font-size: 18px;
   font-weight: 600;
   color: var(--text);
+  text-align: center;
 }
 
 .contact-card-title {
   font-size: 13px;
   color: var(--rose-brown);
   font-weight: 500;
+  text-align: center;
 }
 
 .contact-card-body {
-  flex: 1;
-  min-width: 200px;
   text-align: center;
+  width: 100%;
 }
 
 .contact-card-email {
@@ -1425,19 +1401,6 @@ main {
 
   .hero-contact-card {
     margin-bottom: 0.5rem;
-  }
-
-  .integrator-grid {
-    grid-template-columns: 1fr;
-    gap: 0.8rem;
-  }
-
-  .integrator-card {
-    padding: 16px;
-  }
-
-  .integrator-card h3 {
-    font-size: 15px;
   }
 
   .hero-showcase-head {
