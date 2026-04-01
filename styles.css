@@ -79,18 +79,28 @@ a {
   position: sticky;
   top: 0;
   z-index: 10;
-  backdrop-filter: blur(20px);
-  background: rgba(243, 236, 227, 0.84);
-  border-bottom: 1px solid rgba(96, 71, 53, 0.08);
-}
-
-.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   max-width: var(--max);
   margin: 0 auto;
   padding: 1.15rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  backdrop-filter: blur(20px);
+  background: rgba(243, 236, 227, 0.84);
+}
+
+.brand-lockup {
+  display: inline-flex;
+  gap: 0.9rem;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.brand-lockup img {
+  width: 2.3rem;
+  height: 2.3rem;
 }
 
 .site-nav a {
@@ -106,14 +116,47 @@ a {
   color: var(--rose-brown);
 }
 
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
 .contact-card-container {
   max-width: var(--max);
   margin: 1.5rem auto;
   padding: 0 1.5rem;
 }
 
+.integrator-section {
+  padding: 2rem 0;
+}
+
+.integrator-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.integrator-card {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(96, 71, 53, 0.12);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.integrator-card h3 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: var(--text);
+}
+
 .hero-contact-card {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .contact-card {
@@ -121,18 +164,20 @@ a {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(96, 71, 53, 0.12);
   border-radius: 12px;
-  padding: 18px 20px;
+  padding: 14px 18px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  gap: 6px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .contact-card-header {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  min-width: 180px;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
 }
 
 .contact-card-name {
@@ -151,6 +196,7 @@ a {
 .contact-card-body {
   flex: 1;
   min-width: 200px;
+  text-align: center;
 }
 
 .contact-card-email {
@@ -166,15 +212,17 @@ a {
 
 .contact-card-links {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 
 .contact-card-linkedin {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 14px;
+  gap: 5px;
+  padding: 7px 12px;
   background: #0A66C2;
   color: white;
   text-decoration: none;
@@ -205,7 +253,7 @@ main {
   grid-template-columns: 1.15fr 0.85fr;
   gap: 2rem;
   align-items: stretch;
-  padding: 4rem 0 3rem;
+  padding: 2rem 0 3rem;
 }
 
 .eyebrow {
@@ -1343,6 +1391,14 @@ main {
     display: grid;
   }
 
+  .demo-app {
+    gap: 0.8rem;
+  }
+
+  .demo-sidebar {
+    gap: 0.8rem;
+  }
+
   .repo-card {
     justify-content: stretch;
   }
@@ -1352,18 +1408,36 @@ main {
   }
 
   .site-header {
+    flex-direction: column;
+    gap: 0.8rem;
     border-bottom: none;
+  }
+
+  .brand-lockup {
+    justify-content: center;
   }
 
   .site-nav {
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.8rem;
-    padding: 0.8rem 1rem;
   }
 
   .hero-contact-card {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .integrator-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .integrator-card {
+    padding: 16px;
+  }
+
+  .integrator-card h3 {
+    font-size: 15px;
   }
 
   .hero-showcase-head {
@@ -1416,5 +1490,56 @@ main {
   .hero-build-actions .button,
   .hero-view-button {
     width: 100%;
+  }
+
+  /* Demo mobile improvements */
+  .demo-app {
+    font-size: 15px;
+  }
+
+  .demo-stage-body {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .provider-card {
+    padding: 12px;
+  }
+
+  .provider-card h4,
+  .workflow-card h4 {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  .provider-card p,
+  .workflow-card p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .demo-nav button {
+    font-size: 14px;
+    padding: 10px 12px;
+    min-height: 44px;
+  }
+
+  .mini-stat {
+    font-size: 13px;
+  }
+
+  .button {
+    min-height: 44px;
+    font-size: 14px;
+  }
+
+  .demo-stage-header h3 {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .demo-stage-text {
+    font-size: 14px;
+    line-height: 1.6;
   }
 }
