@@ -538,6 +538,82 @@ main {
   gap: 0.8rem;
 }
 
+.hero-fundingdash-card {
+  margin-top: 1.5rem;
+}
+
+.hero-fundingdash-card .dashboard-card {
+  padding: 1rem;
+}
+
+.hero-fundingdash-card .dashboard-card h3 {
+  font-size: 1rem;
+}
+
+.hero-fundingdash-card .dashboard-card p {
+  font-size: 0.85rem;
+}
+
+.hero-fundingdash-card .dashboard-feature-list li {
+  font-size: 0.8rem;
+}
+
+.hero-fundingdash-card .dashboard-actions .button {
+  padding: 0.5rem 0.85rem;
+  font-size: 0.8rem;
+  min-height: 2.5rem;
+}
+
+.hero-accelerator-links {
+  margin-top: 1.5rem;
+}
+
+.hero-accelerator-links .proof-label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--rose-brown);
+}
+
+.accelerator-link-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.accelerator-link {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0.65rem 0.75rem;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(96, 71, 53, 0.1);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 180ms ease;
+}
+
+.accelerator-link:hover {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(96, 71, 53, 0.2);
+  transform: translateY(-1px);
+}
+
+.accelerator-link strong {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.accelerator-link span {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.2;
+}
+
 .panel-frame::before,
 .card::before,
 .proof-card::before,
@@ -1449,6 +1525,23 @@ main {
 
   .contact-intro h3 {
     font-size: 1.4rem;
+  }
+
+  .hero-accelerator-links {
+    margin-top: 1rem;
+  }
+
+  .accelerator-link-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.4rem;
+  }
+
+  .accelerator-link strong {
+    font-size: 11px;
+  }
+
+  .accelerator-link span {
+    font-size: 10px;
   }
 
   .hero-showcase-head {
